@@ -12,14 +12,7 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <RestAssured_Version>5.3.2</RestAssured_Version>
-        <TestNG_Version>7.10.1</TestNG_Version>
-        <JacksonDatabind_Version>2.17.0</JacksonDatabind_Version>
-        <Gson_Version>2.10.1</Gson_Version>
-        <ExtentReports_Version>5.1.0</ExtentReports_Version>
-        <JavaFaker_Version>1.0.1</JavaFaker_Version>
-        <ProjectLombok_Version>1.18.30</ProjectLombok_Version>
-        <ApacheCommonsLang_Version>3.13.0</ApacheCommonsLang_Version>
+
     </properties>
 
     <dependencies>
@@ -27,49 +20,49 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>RestAssured_Version</version>
+            <version>5.3.2</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>TestNG_Version</version>
+            <version>7.10.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>JacksonDatabind_Version</version>
+            <version>2.17.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>Gson_Version</version>
+            <version>2.10.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>ExtentReports_Version</version>
+            <version>5.1.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
-            <version>JavaFaker_Version</version>
+            <version>1.0.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>ProjectLombok_Version</version>
+            <version>1.18.30</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>ApacheCommonsLang_Version</version>
+            <version>3.13.0</version>
         </dependency>
     </dependencies>
     
