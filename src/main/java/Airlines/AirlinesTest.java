@@ -1,6 +1,5 @@
 package Airlines;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -13,7 +12,6 @@ import Airline_Utilities.Json_Bodies.Airlines_JsonBodies;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 import Airline_Utilities.GenericFunctions;
 public class AirlinesTest {
 
