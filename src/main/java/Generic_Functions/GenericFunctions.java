@@ -1,19 +1,14 @@
-package Airline_Utilities;
+package Generic_Functions;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.File;
-
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.Map;
-import Generic_Functions.BaseClass;
 
-
-
-
-public class GenericFunctions extends BaseClass
-{
-    /*
+public class GenericFunctions extends BaseClass{
     public static Map<String, Object> ReadJsonFile(String JsonFileName) throws IOException {
         //System.out.println("Read Json File - " + System.getenv("name"));
         String JsonFP = GetFilePath(JsonFileName);
@@ -42,5 +37,9 @@ public class GenericFunctions extends BaseClass
 
         return Path;
     }
-    */
+
+    public static int getcurrentyear() {
+        return LocalDate.now().getYear();
+    }
+
 }
