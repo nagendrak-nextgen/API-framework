@@ -1,4 +1,4 @@
-package Airline_Utilities;
+package Reporting_FrameworkLevel;
 
 import Reporting_FrameworkLevel.Setup;
 import com.aventstack.extentreports.ExtentReports;

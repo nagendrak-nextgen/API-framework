@@ -1,6 +1,6 @@
 package Airline_Utilities;
 
-import Airline_Utilities.ExtentReportManager;
+import Reporting_FrameworkLevel.ExtentReportManager;
 import com.sun.net.httpserver.Request;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
