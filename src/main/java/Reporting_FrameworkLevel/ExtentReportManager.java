@@ -1,6 +1,5 @@
 package Reporting_FrameworkLevel;
 
-import Reporting_FrameworkLevel.Setup;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.ExtentColor;
@@ -8,8 +7,6 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.restassured.http.Header;
-
-import java.text.Format;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -74,4 +71,5 @@ public class ExtentReportManager
         String[][] arrHeaders = HeadersList.stream().map(header -> new String[] {header.getName(),header.getValue()})
                         .toArray(String[][] :: new);
         Setup.et.get().info(MarkupHelper.createTable(arrHeaders));
-    }}
+    }
+}

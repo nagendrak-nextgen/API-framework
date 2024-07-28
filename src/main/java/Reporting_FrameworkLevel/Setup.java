@@ -1,10 +1,8 @@
 package Reporting_FrameworkLevel;
 
-import Reporting_FrameworkLevel.ExtentReportManager;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.ITestListener;
-import org.testng.ITestNGMethod;
 
 import java.util.Arrays;
 

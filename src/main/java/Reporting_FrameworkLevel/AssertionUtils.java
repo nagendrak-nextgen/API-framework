@@ -1,11 +1,10 @@
 package Reporting_FrameworkLevel;
 
-import Reporting_FrameworkLevel.ExtentReportManager;
+
 import Airline_Utilities.Json_Bodies.POJO_AssertionKeys;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import io.restassured.response.Response;
 
-import javax.swing.text.html.Option;
 import java.util.*;
 
 public class AssertionUtils {
@@ -40,7 +39,6 @@ public class AssertionUtils {
                 //System.out.println(expectedValueMap.values());
             }
         }
-
 
         if(allMatched)
             ExtentReportManager.LogPassDetails("All assertions are passed. 😊😊😊😊");
