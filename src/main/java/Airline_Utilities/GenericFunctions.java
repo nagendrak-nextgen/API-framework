@@ -7,8 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 import Generic_Functions.BaseClass;
-
-
+import org.testng.Assert;
 
 
 public class GenericFunctions extends BaseClass

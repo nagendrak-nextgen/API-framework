@@ -1,9 +1,10 @@
 package Reporting_FrameworkLevel;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.ITestListener;
 
+import java.io.File;
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class Setup implements ITestListener
@@ -14,9 +15,25 @@ public class Setup implements ITestListener
 
     public void onStart(org.testng.ITestContext context)
     {
-       String fileName = ExtentReportManager.CreateResultFileNameWithTimeStamp();
-       String RestultFullPath = System.getProperty("user.dir") + "\\Execution Results\\" + fileName;
-       er = ExtentReportManager.CreateReportInstances(RestultFullPath,"Test API Automation Report","Test Execution Report");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        String datetime = ExtentReportManager.CreateResultFileNameWithTimeStamp();
+       String fileName = "TestReport_" + datetime + ".html";
+       String ResultFolderPath = System.getProperty("user.dir") + "\\Execution Results\\Result_" + datetime;
+       String Result_ScreenshotPath = ResultFolderPath + "\\Screenshots";
+        File f = new File(Result_ScreenshotPath);
+        f.mkdirs();
+       String RestultFilePath = ResultFolderPath + "\\" + fileName;
+        System.out.println("Time Stamp - " + datetime);
+        //readingPropertyFile rpf = new readingPropertyFile();
+        //readPropertyFiledata("executionname");
+        //System.getProperty("executionname");
+
+       er = ExtentReportManager.CreateReportInstances(RestultFilePath,"Test API Automation Report","Test Execution Report");
+
     }
     public void onFinish(org.testng.ITestContext context)
     {

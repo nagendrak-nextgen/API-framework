@@ -1,0 +1,30 @@
+
+ login:
+  - logicalname: log125
+    username: Nag1
+    password: pwd1
+    errmsgexpected: yes
+    errmessage: The user name is wrong
+  - logicalname: log201
+    username: Nag2
+    password: pwd2
+    errmsgexpected: yes
+    errmessage: The password is wrong
+  - logicalname: log112
+    username: Nag3
+    password: pwd3
+    errmsgexpected: no
+    errmessage:
+ createuser:
+  - logicalname: cu125
+    lastname: kumar1
+    firstname: nag1
+    emailid: nag1@gmail.com
+    phonenumber: 1111
+  - logicalname: cu103
+    lastname: kumar2
+    firstname: nag2
+    emailid: nag2@gmail.com
+    phonenumber: 2222
+
+

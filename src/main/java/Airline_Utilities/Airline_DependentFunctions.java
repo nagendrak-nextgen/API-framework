@@ -33,6 +33,7 @@ public class Airline_DependentFunctions
         //ExtentReportManager.LogInfoDetails("Body - " + qrs.getBody());
         ExtentReportManager.LogInfoDetails("Request Body");
         ExtentReportManager.LogJsonDetails(qrs.getBody());
+
     }
 
     private static void printResponseLogInReport(Response response)

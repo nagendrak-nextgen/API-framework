@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="Master Regression Suite" parallel="tests">
     <listeners>
         <listener class-name="Reporting_FrameworkLevel.Setup"></listener>
     </listeners>
-    <test verbose="2" preserve-order="true"
-          name="C:/Family/Nagendra/2024-06-19/Intellij Scripts/API/API_Framework_FromScratch">
-        <classes>
-            <class name="Airlines.AirlinesTest">
-                <methods>
-                    <include name="PostAirline_With_DetailedVerificationReport"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+    <suite-files>
+        <suite-file path="src/main/java/Smoke/SmokeSuite.xml"/>
+        <suite-file path="src/main/java/Sanity/SanitySuite.xml"/>
+        <suite-file path="src/main/java/Regression/RegressionSuite.xml"/>
+        <suite-file path="src/main/java/TestNG_Annotations/ParallelExecution_Suite.xml"/>
+    </suite-files>
 </suite>

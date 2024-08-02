@@ -5,6 +5,7 @@ import Generic_Functions.BaseClass;
 import Generic_Functions.Enum_RandomDataTypeNames;
 import Generic_Functions.RandomDataGenerator;
 import Reporting_FrameworkLevel.AssertionUtils;
+import Reporting_FrameworkLevel.ExtentReportManager;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import groovy.transform.stc.POJO;
 import io.restassured.RestAssured;
@@ -25,7 +26,7 @@ import java.util.stream.Stream;
 import Generic_Functions.GenericFunctions;
 
 public class AirlinesTest {
-
+    @Test(priority = 1)
     public static void GetAirlinesDetails()
     {
         Response res = RestAssured.given()
@@ -35,8 +36,9 @@ public class AirlinesTest {
 
         System.out.println("*********************************");
         System.out.println(res);
+        ExtentReportManager.LogInfoDetails("Test Case 'AirlinesTest' executed successfully");
     }
-    @Test
+    @Test(priority = 2)
 
     public static void PostAirline() throws IOException {
         //String name = System.getProperty("user.dir") == "nag"? "Nagendra Kumar" : "Ujji";
@@ -73,7 +75,7 @@ public class AirlinesTest {
         Assert.assertEquals(POJO_AfterLoadingResponse,ModifiedPayload);
     }
 
-    @Test
+    @Test(priority = 3)
     public static void PostAirline_With_DetailedVerificationReport() throws IOException {
         System.out.println("Test 'PostAirline_With_DetailedVerificationReport' is executed");
         String BaseURL = BaseClass.str_BaseURI;

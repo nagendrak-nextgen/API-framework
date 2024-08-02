@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression_Suite">
+    <listeners>
+        <listener class-name="Reporting_FrameworkLevel.Setup"></listener>
+    </listeners>
+    <test name="Regression Module">
+        <classes>
+            <class name="Regression.Regression_Suite">
+                <methods>
+                    <include name="Regression_Suite_method1"/>
+                    <include name="Regression_Suite_method2"/>
+                    <include name="Regression_Suite_method3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

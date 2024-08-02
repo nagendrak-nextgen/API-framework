@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression_Suite2">
+    <listeners>
+        <listener class-name="Reporting_FrameworkLevel.Setup"></listener>
+    </listeners>
+    <test name="Orders Module">
+        <classes>
+            <class name="TestNG_Annotations.Class1"/>
+            <class name="TestNG_Annotations.Class2"/>
+        </classes>
+    </test>
+</suite>

@@ -33,7 +33,8 @@ public class ExtentReportManager
         DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("yyyy_MM_dd_mm_ss");
         LocalDateTime ldt = LocalDateTime.now();
         String FormatedTime = dateTimeFormat.format(ldt);
-        return "TestReport_" + FormatedTime + ".html";
+        //return "TestReport_" + FormatedTime + ".html";
+        return FormatedTime;
     }
 
     public static void LogPassDetails(String log)
@@ -64,6 +65,7 @@ public class ExtentReportManager
     public static void LogJsonDetails(String Json)
     {
         Setup.et.get().info(MarkupHelper.createCodeBlock(Json, CodeLanguage.JSON));
+
     }
 
     public static void LogTableDetails(List<Header> HeadersList)
@@ -71,5 +73,11 @@ public class ExtentReportManager
         String[][] arrHeaders = HeadersList.stream().map(header -> new String[] {header.getName(),header.getValue()})
                         .toArray(String[][] :: new);
         Setup.et.get().info(MarkupHelper.createTable(arrHeaders));
+    }
+
+    public static void LogScrenshotToExtentReport(String ScreenshotPath, String FailReason)
+    {
+        Setup.et.get().addScreenCaptureFromPath(ScreenshotPath, FailReason);
+
     }
 }
