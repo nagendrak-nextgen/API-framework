@@ -2,12 +2,9 @@ package Airlines;
 
 import Airline_Utilities.Json_Bodies.POJO_Airlines_Post;
 import Generic_Functions.BaseClass;
-import Generic_Functions.Enum_RandomDataTypeNames;
-import Generic_Functions.RandomDataGenerator;
 import Reporting_FrameworkLevel.AssertionUtils;
 import Reporting_FrameworkLevel.ExtentReportManager;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import groovy.transform.stc.POJO;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -15,13 +12,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Airline_Utilities.Airline_DependentFunctions;
-import Airline_Utilities.Json_Bodies.Airlines_JsonBodies;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Stream;
 
 import Generic_Functions.GenericFunctions;
 
@@ -97,7 +91,6 @@ public class AirlinesTest {
         expectedvalueMap.put("established", requestPayload.getEstablished());
 
         AssertionUtils.assertExpectedValueWithJsonPath(res, expectedvalueMap);
-
     }
 
 }

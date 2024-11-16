@@ -6,8 +6,10 @@
     </listeners>
     <test name="Orders Module">
         <classes>
-            <class name="TestNG_Annotations.Class1"/>
-            <class name="TestNG_Annotations.Class2"/>
+            <!--class name="TestNG_Annotations.Class1"/-->
+            <!--class name="TestNG_Annotations.Class2"/-->
+            <class name="ITestResults.itestresults"/>
+
         </classes>
     </test>
 </suite>

@@ -41,6 +41,7 @@ public class AssertionUtils {
         }
 
         if(allMatched)
+//
             ExtentReportManager.LogPassDetails("All assertions are passed. 😊😊😊😊");
         else
             ExtentReportManager.LogFailDetails("All assertions did not passed. 😒😒😒😒");

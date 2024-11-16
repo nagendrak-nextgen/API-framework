@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Master Regression Suite" parallel="tests">
+<suite name="Master Regression Suite" preserve-order="true" parallel="tests">
+    <!--groups>
+        <run>
+            <include name = "smoke"/>
+            <exclude name="sanity"/>
+        </run>
+    </groups-->
+    <parameter name="browgroup1" value="Chrome"></parameter>
+    <parameter name="browgroup2" value="TE"></parameter>
+    <!--parameter name="browgroup2" value="TE"></parameter-->
+
     <listeners>
         <listener class-name="Reporting_FrameworkLevel.Setup"></listener>
     </listeners>
-    <suite-files>
-        <suite-file path="src/main/java/Smoke/SmokeSuite.xml"/>
-        <suite-file path="src/main/java/Sanity/SanitySuite.xml"/>
-        <suite-file path="src/main/java/Regression/RegressionSuite.xml"/>
-        <suite-file path="src/main/java/TestNG_Annotations/ParallelExecution_Suite.xml"/>
-    </suite-files>
+    <test name="Orders Module">
+    <classes>
+        <!--class name="TestNG_Annotations.Class1"/-->
+        <!--class name="TestNG_Annotations.Class2"/-->
+        <class name="Practice_Package.PracticeClass"/>
+        <class name="ITestResults.itestresults"/>
+
+    </classes>
+    </test>
 </suite>

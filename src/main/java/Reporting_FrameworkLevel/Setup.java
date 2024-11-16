@@ -46,7 +46,8 @@ public class Setup implements ITestListener
     public void onTestStart(org.testng.ITestResult result) {
         String TestPackageName = result.getTestClass().getName();
         String TestMethodName = result.getMethod().getMethodName();
-        String TestName = "Test Name_" + TestPackageName + "_" + TestMethodName;
+        //String TestName = "Test Name_" + TestPackageName + "_" + TestMethodName;
+        String TestName = TestMethodName;
         ExtentTest test =  er.createTest(TestName);
         et.set(test);
     }

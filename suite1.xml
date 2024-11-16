@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression_Suite1">
+<suite name="Master Regression Suite" parallel="tests">
     <listeners>
         <listener class-name="Reporting_FrameworkLevel.Setup"></listener>
     </listeners>
-    <test name="Allergy Module">
-        <classes>
-            <class name="TestNG_Annotations.data_Provider">
-                <methods>
-                    <include name="printuserdetails"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+    <suite-files>
+        <suite-file path="src/main/java/Smoke/SmokeSuite.xml"/>
+        <suite-file path="src/main/java/Sanity/SanitySuite.xml"/>
+        <suite-file path="src/main/java/Regression/RegressionSuite.xml"/>
+        <suite-file path="src/main/java/TestNG_Annotations/ParallelExecution_Suite.xml"/>
+    </suite-files>
 </suite>

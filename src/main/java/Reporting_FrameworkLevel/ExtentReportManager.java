@@ -34,7 +34,9 @@ public class ExtentReportManager
         LocalDateTime ldt = LocalDateTime.now();
         String FormatedTime = dateTimeFormat.format(ldt);
         //return "TestReport_" + FormatedTime + ".html";
+
         return FormatedTime;
+
     }
 
     public static void LogPassDetails(String log)
